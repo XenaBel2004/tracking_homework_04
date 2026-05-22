@@ -1,0 +1,26 @@
+stages:
+  train:
+    cmd: python3 src/train.py
+    deps:
+      - src/train.py
+      - ai-vs-human-generated-dataset-hw/Train_1
+      - ai-vs-human-generated-dataset-hw/Test_1
+    outs:
+      - models/base_model.pt
+
+  finetune:
+    cmd: python3 src/finetune.py
+    deps:
+      - src/finetune.py
+      - models/base_model.pt
+      - ai-vs-human-generated-dataset-hw/Train_2
+      - ai-vs-human-generated-dataset-hw/Test_2
+    outs:
+      - models/finetuned_model.pt
+
+  compare:
+    cmd: python3 src/compare.py
+    deps:
+      - src/compare.py
+      - models/base_model.pt
+      - models/finetuned_model.pt

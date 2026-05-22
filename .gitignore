@@ -1,3 +1,22 @@
-ai-vs-human-generated-dataset*
-.ipynb_checkpoints
-.DS_store
+# data and artifacts
+ai-vs-human-generated-dataset*/
+data/
+models/
+runs/
+logs/
+metrics/
+*.pt
+*.pth
+*.ckpt
+
+# python
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# system
+.DS_Store
+
+# dvc cache is local
+.dvc/cache/

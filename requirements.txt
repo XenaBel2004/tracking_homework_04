@@ -1,0 +1,13 @@
+torch
+torchvision
+pandas
+numpy
+pillow
+scikit-learn
+matplotlib
+tqdm
+tensorboard
+boto3
+dvc
+ipykernel
+notebook
